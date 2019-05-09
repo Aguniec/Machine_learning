@@ -28,7 +28,7 @@ def trapezoidal_rule(n, a):
     print("result for trapezoidal rule:  ", result, np.sin(b)-np.sin(a))
 
 
-def simpons_method(n, a, b):
+def simpons_rule(n, a, b):
       dx = (b-a)/(n)
       result, sum1, sum = 0, 0, 0
       for i in range (1, n):
@@ -38,25 +38,16 @@ def simpons_method(n, a, b):
                   result = result + f(x)
       result = f(a)+f(b)+2*result+4*sum1
       result = result*(dx/6)
-      print("wynik met. simps. wynosi : ", result) 
-      
+      print("result for simpsons_rule: ", result) 
+
+
 squares_method(10, 0)
+
 trapezoidal_rule(10000, 0)
+
 simpons_method(10,0,1)
 
 
-
-# metoda Simpsona
-
-
-n = 10
-a = 0
-b = 1
-
-wynik = 0
-suma1 = 0
-suma = 0
-wartosc = 0
 
 
 
