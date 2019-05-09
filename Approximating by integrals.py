@@ -2,25 +2,25 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import integrate
 
-#metoda prostokątów
+#squares rule
 
 def f(x):
     return np.cos(x);
 
-n=10#liczba punktów podziału
+n=10 #number of bins
 a = 0
 b = np.pi/2
 dx=(b-a)/(n)
-wynik=0
+result=0
 for i in range (1,n-1):
-    wynik+=f(a+i*dx)*dx
+    result+=f(a+i*dx)*dx
 
 print("wynik met. prost. wynosi : ",wynik,np.sin(b)-np.sin(a))
 
-
-#Trapezoidal rule
 def f(x):
     return np.cos(x);
+
+#Trapezoidal rule
 n=10000
 a=0
 b=np.pi/2
@@ -35,8 +35,6 @@ print("wynik met. trap. wynosi : ",wynik,np.sin(b)-np.sin(a) )
 
 
 #Simpsons rule   
-def f(x):
-  return np.cos(x);
 n=10
 a=0
 b=1
