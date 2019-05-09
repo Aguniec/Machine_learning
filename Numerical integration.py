@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import integrate
 
-
 def f(x):
     return np.cos(x)
 
